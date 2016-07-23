@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+body {
+  font-family:  "Comic Sans MS", "Baskerville Old Face", "Times New Roman", "Trebuchet MS";
+  background-image: url("profile.png");
+ }
+
+fieldset  {
+	margin-right: 1000px
+}
+
+div  {
+	color:#0502F9;
+	font-weight: bold;
+}

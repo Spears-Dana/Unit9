@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Focus Blur</title>
+<link rel="stylesheet" type="text/css" href="profile.css" />
+
+
+<script type="text/javascript">
+
+var val1;
+
+
+function mess(val1) {
+
+	var message = "";
+ 	var atri;
+	
+	switch (val1) {
+		case 0:
+        message = "Enter your first Name";
+		atri = "firstH";
+        break;
+		
+		case 1:
+        message = "Enter your Last Name";
+		atri = "lastH"
+        break;
+		
+		case 2:
+        message = "Enter your Zodiac Sign";
+		atri = "zodiacH"
+        break;
+		
+		case 3:
+        message = "Enter your Email Address";
+		atri = "emailH"
+        break;
+		
+		case 4:
+        message = "Enter your Favorite Drink";
+		atri = "drinkH"
+        break;
+		
+		case 5:
+        message = "Enter your Place of Birth";
+		atri = "birthH"
+        break;
+	}
+	
+document.getElementById(atri).innerHTML = message;
+}
+
+function messy(val1)  {
+	
+	var atri;
+
+	switch (val1) {
+			case 0:
+			atri = "firstH";
+			break;
+			
+			case 1:
+			atri = "lastH"
+			break;
+			
+			case 2:
+			atri = "zodiacH"
+			break;
+			
+			case 3:
+			atri = "emailH"
+			break;
+			
+			case 4:
+			atri = "drinkH"
+			break;
+			
+			case 5:
+			atri = "birthH"
+			break;
+		}
+	
+	   document.getElementById(atri).innerHTML = "";
+	}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Smitten Kitten</h1>
+
+<h3>Fill Out The Form</h3>
+<h3>Click Submit And</h3>
+<h3>Adopt A Kitten!</h3><br>
+
+<form method="post" action="focusblur.html">
+    First: <input type="text" name="first" onfocus="mess(0)" onBlur="messy(0)"> <div id="firstH"></div><br>
+	Last:  <input type="text" name="last" onfocus="mess(1)" onBlur="messy(1)"/> <div id="lastH"></div><br> 
+    Zodiac: <input type="text" name="zodiac" onfocus="mess(2)" onBlur="messy(2)"/> <div id="zodiacH"></div><br> 
+    Email: <input type="text" name="email" onfocus="mess(3)" onBlur="messy(3)"/> <div id="emailH"></div><br>  
+    Drink:  <input type="text" name="drink" onfocus="mess(4)" onBlur="messy(4)"/> <div id="drinkH"></div><br>
+    Birth: <input type="text" name="birth" onfocus="mess(5)" onBlur="messy(5)"/> <div id="birthH"></div><br> 
+    
+    <input type="submit" name="submit" value="submit" id="submit" />
+</form>
+
+</body>
+</html>

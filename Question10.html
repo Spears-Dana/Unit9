@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>YOU AS ART</title>
+<link rel="stylesheet" type="text/css" href="art.css" />
+
+<script>
+window.onload = function () {
+    document.getElementById("username").onkeyup = chkStat;
+    chkStat();
+	document.getElementById("password").onkeyup = chkStat;
+	chkStat();
+	document.getElementById("password2").onkeyup = chkStat;
+	chkStat();
+};
+
+function chkStat() {
+    if (document.getElementById("username").value == "" || document.getElementById("password").value == "" || document.getElementById("password2").value == "") {
+        
+		document.getElementById("submit").disabled = true;
+    
+	} 
+	
+	else {
+        document.getElementById("submit").disabled = false;
+    }
+}
+
+function validateThis(Aform) {
+	var returnValue = true;
+
+	if 	(Aform["password"].value !== Aform["password2"].value)  {
+		alert("Passwords Don't match!");
+		returnValue = false;
+	}
+	else {
+		returnValue = true;
+	}
+	return returnValue;	
+}
+</script>
+
+</head>
+
+<body>
+
+
+<h1>YOU AS ART</h1><br>
+<h2>Sign Up To See Yourself Intigrated <br>In A Famous Work Of Art!</h2>
+
+<form method="post" action="art.html">
+    <fieldset>
+      <legend>Sign In!</legend>
+      <p>
+      <label for="realname">Real Name:</label>
+      <input type="text" name="realname" id="realname"/><br />
+      
+      <label for="email">Email Address:</label>
+      <input type="text" name="email" id="email"/><br />
+      
+      <label for="username">*User Name:</label>
+      <input type="text" name="username" id="username"/><br />
+      
+      <label for="password">*Password:</label>
+      <input type="password" name="password" id="password" /><br />
+      
+      <label for="password2">*Retype Password:</label>
+      <input type="password" name="password2" id="password2"/>
+      </p>
+      <p>        *required </p>
+      <p>
+        <input type="submit" name="submit" id="submit" value="Log In" onclick="return validateThis(this.form);"/>
+      </p>
+    </fieldset>
+  </form>
+
+</body>
+</html>
